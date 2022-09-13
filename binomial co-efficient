@@ -1,0 +1,20 @@
+#include<stdio.h>
+int binomialcoeff(int n, int k)
+{
+	if(k>n)
+	return 0;
+	if(k==0 || k==n)
+	return 1;
+	return binomialcoeff(n-1,k-1)+ binomialcoeff(n-1,k);
+	
+}
+int main()
+{
+	int n,k;
+	printf("enter n value");
+	scanf("%d",&n);
+	printf("enter k value");
+	scanf("%d",&k);
+	printf("value of c(%d,%d) is %d",n,k,binomialcoeff(n,k));
+	return 0;
+}
